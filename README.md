@@ -1,134 +1,105 @@
-# ERDOS
-
-ERDOS is a platform for developing self-driving cars and robotics applications.
-
-[![Crates.io][crates-badge]][crates-url]
-[![Build Status](https://github.com/erdos-project/erdos/workflows/CI/badge.svg)](https://github.com/erdos-project/erdos/actions)
-[![Documentation Status](https://readthedocs.org/projects/erdos/badge/?version=latest)](https://erdos.readthedocs.io/en/latest/?badge=latest)
-[![Documentation](https://docs.rs/erdos/badge.svg)](https://docs.rs/erdos/)
-
-[crates-badge]: https://img.shields.io/crates/v/erdos.svg
-[crates-url]: https://crates.io/crates/erdos
-
-# Getting started
-
-# Local installation
-
-## System requirements
-
-ERDOS is known to work on Ubuntu 18.04 and 20.04.
-
-## Rust installation
-
-To develop an ERDOS application in Rust, simply include ERDOS in `Cargo.toml`.
-The latest ERDOS release is published on
-[Crates.io](https://crates.io/crates/erdos)
-and documentation is available on [Docs.rs](https://docs.rs/erdos).
-
-If you'd like to contribute to ERDOS, first
-[install Rust](https://www.rust-lang.org/tools/install).
-Then run the following to clone the repository and build ERDOS:
-```console
-git clone https://github.com/erdos-project/erdos.git && cd erdos
-cargo build
-```
-
-## Python Installation
-
-To develop an ERDOS application in Python, simply run
-`pip install erdos`. Documentation is available on
-[Read the Docs](https://erdos.readthedocs.io/).
-
-If you'd like to contribute to ERDOS, first
-[install Rust](https://www.rust-lang.org/tools/install).
-Within a [virtual environment](https://docs.python.org/3/tutorial/venv.html),
-run the following to clone the repository and build ERDOS:
-```console
-git clone https://github.com/erdos-project/erdos.git && cd erdos/python
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><h1 tabindex="-1" dir="auto"><a id="user-content-erdos" class="anchor" aria-hidden="true" tabindex="-1" href="#erdos"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">鄂尔多斯</font></font></h1>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ERDOS 是一个用于开发自动驾驶汽车和机器人应用程序的平台。</font></font></p>
+<p dir="auto"><a href="https://crates.io/crates/erdos" rel="nofollow"><img src="https://camo.githubusercontent.com/da2ebe2dce8fd3f4878f052ed9530967dcd4e542be4bbe84d6a1e8faa4852296/68747470733a2f2f696d672e736869656c64732e696f2f6372617465732f762f6572646f732e737667" alt="Crates.io" data-canonical-src="https://img.shields.io/crates/v/erdos.svg" style="max-width: 100%;"></a>
+<a href="https://github.com/erdos-project/erdos/actions"><img src="https://github.com/erdos-project/erdos/workflows/CI/badge.svg" alt="构建状态" style="max-width: 100%;"></a>
+<a href="https://erdos.readthedocs.io/en/latest/?badge=latest" rel="nofollow"><img src="https://camo.githubusercontent.com/909c22d41bf65096c9c054cd6c6af84c2eb24ce8f5529f13650fddfabb152858/68747470733a2f2f72656164746865646f63732e6f72672f70726f6a656374732f6572646f732f62616467652f3f76657273696f6e3d6c6174657374" alt="文件状态" data-canonical-src="https://readthedocs.org/projects/erdos/badge/?version=latest" style="max-width: 100%;"></a>
+<a href="https://docs.rs/erdos/" rel="nofollow"><img src="https://camo.githubusercontent.com/9c8da8741e3947d21cae07d7979a6f322268c2991a2d4eea4fbe5a6647d2caed/68747470733a2f2f646f63732e72732f6572646f732f62616467652e737667" alt="文档" data-canonical-src="https://docs.rs/erdos/badge.svg" style="max-width: 100%;"></a></p>
+<h1 tabindex="-1" dir="auto"><a id="user-content-getting-started" class="anchor" aria-hidden="true" tabindex="-1" href="#getting-started"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入门</font></font></h1>
+<h1 tabindex="-1" dir="auto"><a id="user-content-local-installation" class="anchor" aria-hidden="true" tabindex="-1" href="#local-installation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">本地安装</font></font></h1>
+<h2 tabindex="-1" dir="auto"><a id="user-content-system-requirements" class="anchor" aria-hidden="true" tabindex="-1" href="#system-requirements"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">系统要求</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">已知 ERDOS 可在 Ubuntu 18.04 和 20.04 上运行。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-rust-installation" class="anchor" aria-hidden="true" tabindex="-1" href="#rust-installation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">防锈安装</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要在 Rust 中开发 ERDOS 应用程序，只需将 ERDOS 包含在</font></font><code>Cargo.toml</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">. </font><font style="vertical-align: inherit;">最新的 ERDOS 版本发布在
+</font></font><a href="https://crates.io/crates/erdos" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crates.io上，文档可在</font></font></a><font style="vertical-align: inherit;"></font><a href="https://docs.rs/erdos" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Docs.rs</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+上找到</font><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想为 ERDOS 做出贡献，请首先
+</font></font><a href="https://www.rust-lang.org/tools/install" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装 Rust</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">然后运行以下命令来克隆存储库并构建 ERDOS：</font></font></p>
+<div class="highlight highlight-text-shell-session notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-c1">git clone https://github.com/erdos-project/erdos.git &amp;&amp; cd erdos</span>
+<span class="pl-c1">cargo build</span></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="git clone https://github.com/erdos-project/erdos.git &amp;&amp; cd erdos
+cargo build" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<h2 tabindex="-1" dir="auto"><a id="user-content-python-installation" class="anchor" aria-hidden="true" tabindex="-1" href="#python-installation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Python安装</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要使用 Python 开发 ERDOS 应用程序，只需运行
+</font></font><code>pip install erdos</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">. </font><font style="vertical-align: inherit;">文档可在
+</font></font><a href="https://erdos.readthedocs.io/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">阅读文档</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中找到。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想为 ERDOS 做出贡献，请首先
+</font></font><a href="https://www.rust-lang.org/tools/install" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装 Rust</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">在</font></font><a href="https://docs.python.org/3/tutorial/venv.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">虚拟环境</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中，运行以下命令来克隆存储库并构建 ERDOS：</font></font></p>
+<div class="highlight highlight-text-shell-session notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-c1">git clone https://github.com/erdos-project/erdos.git &amp;&amp; cd erdos/python</span>
+<span class="pl-c1">pip3 install maturin</span>
+<span class="pl-c1">maturin develop</span></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="git clone https://github.com/erdos-project/erdos.git &amp;&amp; cd erdos/python
 pip3 install maturin
-maturin develop
-```
-
-The Python-Rust bridge interface is developed in the `python` crate, which
-also contains user-facing python files under the `python/erdos` directory.
-
-If you'd like to build ERDOS for release (better performance, but longer
-build times), run `maturin develop --release`.
-
-## Running an example
-
-```console
-python3 python/examples/simple_pipeline.py
-```
-
-# Writing Applications
-
-ERDOS provides Python and Rust interfaces for developing applications.
-
-The Python interface provides easy integration with popular libraries
-such as tensorflow, but comes at the cost of performance
-(e.g. slower serialization and the [lack of parallelism within a process](https://wiki.python.org/moin/GlobalInterpreterLock)).
-
-The Rust interface provides more safety guarantees
-(e.g. compile-time type checking) and faster performance
-(e.g. multithreading and zero-copy message passing).
-High performance, safety critical applications such as
-self-driving car pipelines deployed in production should use the
-Rust API to take full advantage of ERDOS.
-
-# ERDOS Design
-
-ERDOS is a streaming dataflow system designed for self-driving car
-pipelines and robotics applications.
-
-Components of the pipelines are implemented as **operators** which
-are connected by **data streams**. The set of operators and streams
-forms the **dataflow graph**, the representation of the pipline that
-ERDOS processes.
-
-Applications define the dataflow graph by connecting operators to streams
-in the **driver** section of the program. Operators are typically
-implemented elsewhere.
-
-ERDOS is designed for low latency. Self-driving car pipelines require
-end-to-end deadlines on the order of hundreds of milliseconds for safe
-driving. Similarly, self-driving cars typically process gigabytes per
-second of data on small clusters. Therefore, ERDOS is optimized to
-send small amounts of data (gigabytes as opposed to terabytes)
-as quickly as possible.
-
-ERDOS provides determinism through **watermarks**. Low watermarks
-are a bound on the age of messages received and operators will ignore
-any messages older than the most recent watermark received. By processing
-on watermarks, applications can avoid non-determinism from processing
-messages out of order.
-
-To read more about the ideas behind ERDOS, refer to our paper,
-[*D3: A Dynamic Deadline-Driven Approach for Building Autonomous Vehicles*](https://dl.acm.org/doi/10.1145/3492321.3519576).
-If you find ERDOS useful to your work, please consider citing our paper:
-```bibtex
-@inproceedings{gog2022d3,
+maturin develop" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Python-Rust 桥接口是在</font></font><code>python</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">crate 中开发的，该目录下还包含面向用户的 python 文件</font></font><code>python/erdos</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想构建 ERDOS 进行发布（更好的性能，但构建时间更长），请运行</font></font><code>maturin develop --release</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">.</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-running-an-example" class="anchor" aria-hidden="true" tabindex="-1" href="#running-an-example"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运行一个例子</font></font></h2>
+<div class="highlight highlight-text-shell-session notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-c1">python3 python/examples/simple_pipeline.py</span></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="python3 python/examples/simple_pipeline.py" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<h1 tabindex="-1" dir="auto"><a id="user-content-writing-applications" class="anchor" aria-hidden="true" tabindex="-1" href="#writing-applications"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">编写应用程序</font></font></h1>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ERDOS 提供用于开发应用程序的 Python 和 Rust 接口。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Python 接口提供了与tensorflow 等流行库的轻松集成，但是以性能为代价的（例如，序列化速度较慢，</font></font><a href="https://wiki.python.org/moin/GlobalInterpreterLock" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">进程内缺乏并行性</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">）。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Rust 接口提供了更多的安全保证（例如编译时类型检查）和更快的性能（例如多线程和零复制消息传递）。</font><font style="vertical-align: inherit;">高性能、安全关键型应用程序（例如在生产中部署的自动驾驶汽车管道）应使用 Rust API 来充分利用 ERDOS。</font></font></p>
+<h1 tabindex="-1" dir="auto"><a id="user-content-erdos-design" class="anchor" aria-hidden="true" tabindex="-1" href="#erdos-design"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">鄂尔多斯设计</font></font></h1>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ERDOS 是一种流数据流系统，专为自动驾驶汽车管道和机器人应用而设计。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">管道的组件被实现为通过</font><strong><font style="vertical-align: inherit;">数据流</font></strong><font style="vertical-align: inherit;">连接的</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运算符</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">运算符和流的集合形成了</font><strong><font style="vertical-align: inherit;">数据流图</font></strong><font style="vertical-align: inherit;">，即 ERDOS 处理的管道的表示。</font></font><strong><font style="vertical-align: inherit;"></font></strong><font style="vertical-align: inherit;"></font><strong><font style="vertical-align: inherit;"></font></strong><font style="vertical-align: inherit;"></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">应用程序通过将运算符连接到程序</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">驱动</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">程序部分中的流来定义数据流图。</font><font style="vertical-align: inherit;">运算符通常在其他地方实现。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ERDOS 专为低延迟而设计。</font><font style="vertical-align: inherit;">自动驾驶汽车管道需要数百毫秒的端到端截止时间才能安全驾驶。</font><font style="vertical-align: inherit;">同样，自动驾驶汽车通常在小型集群上每秒处理千兆字节的数据。</font><font style="vertical-align: inherit;">因此，ERDOS 经过优化，可以尽快发送少量数据（千兆字节而不是太字节）。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ERDOS 通过水印</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提供确定性</font><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">低水印对收到的消息的寿命有限制，操作员将忽略任何早于收到的最新水印的消息。</font><font style="vertical-align: inherit;">通过处理水印，应用程序可以避免因无序处理消息而导致的不确定性。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要了解有关 ERDOS 背后的想法的更多信息，请参阅我们的论文
+</font></font><a href="https://dl.acm.org/doi/10.1145/3492321.3519576" rel="nofollow"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">D3：构建自动驾驶车辆的动态截止日期驱动方法</font></font></em></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">如果您发现 ERDOS 对您的工作有用，请考虑引用我们的论文：</font></font></p>
+<div class="highlight highlight-text-bibtex notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-k">@inproceedings</span>{<span class="pl-en">gog2022d3</span>,
+  <span class="pl-s">title</span>=<span class="pl-s"><span class="pl-pds">{</span>D3: a dynamic deadline-driven approach for building autonomous vehicles<span class="pl-pds">}</span></span>,
+  <span class="pl-s">author</span>=<span class="pl-s"><span class="pl-pds">{</span>Gog, Ionel and Kalra, Sukrit and Schafhalter, Peter and Gonzalez, Joseph E and Stoica, Ion<span class="pl-pds">}</span></span>,
+  <span class="pl-s">booktitle</span>=<span class="pl-s"><span class="pl-pds">{</span>Proceedings of the Seventeenth European Conference on Computer Systems<span class="pl-pds">}</span></span>,
+  <span class="pl-s">pages</span>=<span class="pl-s"><span class="pl-pds">{</span>453--471<span class="pl-pds">}</span></span>,
+  <span class="pl-s">year</span>=<span class="pl-s"><span class="pl-pds">{</span>2022<span class="pl-pds">}</span></span>
+}</pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="@inproceedings{gog2022d3,
   title={D3: a dynamic deadline-driven approach for building autonomous vehicles},
   author={Gog, Ionel and Kalra, Sukrit and Schafhalter, Peter and Gonzalez, Joseph E and Stoica, Ion},
   booktitle={Proceedings of the Seventeenth European Conference on Computer Systems},
   pages={453--471},
   year={2022}
-}
-```
-
-# Pylot
-
-We are actively developing an AV platform atop ERDOS! For more information, see the [Pylot repository](https://github.com/erdos-project/pylot/).
-
-# Getting involved
-
-If you would like to contact us, you can:
-* [Community on Slack](https://forms.gle/KXwSrjM6ZqRi2MT18): Join our community
-on Slack for discussions about development, questions about usage, and feature
-requests.
-* [Github Issues](https://github.com/erdos-project/erdos/issues): For reporting
-bugs.
-
-We always welcome contributions to ERDOS. One way to get started is to
-pick one of the issues tagged with **good first issue** -- these are usually good issues that help you familiarize yourself with the ERDOS
-code base. Please submit contributions using pull requests.
+}" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<h1 tabindex="-1" dir="auto"><a id="user-content-pylot" class="anchor" aria-hidden="true" tabindex="-1" href="#pylot"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">皮洛特</font></font></h1>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们正在 ERDOS 上积极开发 AV 平台！</font><font style="vertical-align: inherit;">有关更多信息，请参阅</font></font><a href="https://github.com/erdos-project/pylot/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pylot 存储库</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<h1 tabindex="-1" dir="auto"><a id="user-content-getting-involved" class="anchor" aria-hidden="true" tabindex="-1" href="#getting-involved"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">卷入</font></font></h1>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想联系我们，您可以：</font></font></p>
+<ul dir="auto">
+<li><a href="https://forms.gle/KXwSrjM6ZqRi2MT18" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Slack 社区</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：加入我们的 Slack 社区，讨论有关开发、使用问题和功能请求的问题。</font></font></li>
+<li><a href="https://github.com/erdos-project/erdos/issues"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Github Issues</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：用于报告错误。</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们始终欢迎为鄂尔多斯做出贡献。</font><font style="vertical-align: inherit;">一种开始的方法是选择一个标有</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“好第一期”</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">的问题——这些通常是帮助您熟悉 ERDOS 代码库的好问题。</font><font style="vertical-align: inherit;">请使用拉取请求提交贡献。</font></font></p>
+</article></div>
